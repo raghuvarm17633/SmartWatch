@@ -24,7 +24,9 @@ data = { 'S.No': pd.Series([1,2,3,4,5,6,7,8,9,10]),
          'Sold_in_2022': pd.Series([130,400,150,450,230,80,60,275,275,25]),
          'Sold_in_2023': pd.Series([160,425,200,475,250,100,65,290,325,35]),
          'Best_Selling_Model':pd.Series(['Apple Watch Series 7','Noise Pulse 2 Max Smartwatch',"Fossil Fenmore Analog Black Dial Men's Watch",'Titan Smart','Wrogn fitness smart band','Galaxy Watch 6 Classic hands-on','Google Pixel Watch (GPS)','Fastrack Reflex Vox','Amazfit T Rex Pro','Rolex Daytona'])}
+
 Data = pd.DataFrame(data)
+
 print(Data)
 
 
@@ -38,13 +40,18 @@ print(Data)
  # **Copy the DataSet**
 
  # Copy the Data to make operations without any effect of original data
+
 print('----------------------Copied Data----------------------')
 
+
 copy = Data.copy(deep=False)
+
 print(copy)
 
 # Accessing Panda Series Elements
+
 print('----------Access with Position----------')
+
 print(copy[0::2])
 
 
@@ -57,15 +64,20 @@ print(copy[0::2])
 ## Row Operations
 
 # Performing the Row Operations
+
 print('-----Row Operations-----')
+
 # selecting a row and print the selected row
+
 print(copy.loc[9])
 
 ![image](https://github.com/raghuvarm17633/SmartWatch/assets/137690672/65fbd0e9-d2f9-444f-8d01-a719715e6523)
 
 
 # Adding a Row and print the DataFrame with including added row
+
 copy.loc[10] = [11,'DanielKhan',10,100,30,150,170,165,170,'Danielkhan series 1']
+
 print(copy)
 
 
@@ -76,6 +88,7 @@ print(copy)
 
 # Deleting a selected row and print the DataFrame
 cop = copy.drop(10)
+
 print(cop)
 
 ![image](https://github.com/raghuvarm17633/SmartWatch/assets/137690672/896e1005-0f48-4f7a-9b21-bd8c49943672)
